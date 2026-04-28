@@ -36,7 +36,7 @@ export default function Revenue() {
         <div className="text-center mb-16">
           <p
             className="font-semibold uppercase tracking-widest mb-3"
-            style={{ fontSize: '11px', color: '#E8C547', letterSpacing: '0.12em' }}
+            style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
           >
             Revenue Impact
           </p>
@@ -45,7 +45,7 @@ export default function Revenue() {
             style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
           >
             Turn Every Drink Into a{' '}
-            <span style={{ color: '#E8C547' }}>Revenue Driver</span>
+            <span style={{ color: '#f36a22' }}>Revenue Driver</span>
           </h2>
           <p
             className="mx-auto leading-relaxed"
@@ -93,7 +93,7 @@ export default function Revenue() {
           className="rounded-2xl p-8 md:p-10"
           style={{
             background: '#0D0D1A',
-            border: '1px solid rgba(232,197,71,0.28)',
+            border: '1px solid rgba(243,106,34,0.28)',
             opacity: basketInView ? 1 : 0,
             transform: basketInView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
@@ -121,12 +121,12 @@ export default function Revenue() {
                       <span style={{ color: '#8B8FA8', fontSize: '13px', textDecoration: 'line-through' }}>
                         R{item.before}
                       </span>
-                      <span className="font-bold" style={{ color: '#E8C547', fontSize: '14px' }}>
+                      <span className="font-bold" style={{ color: '#f36a22', fontSize: '14px' }}>
                         R{item.after}–R{item.afterMax}
                       </span>
                       <span
                         className="px-2 py-0.5 rounded-full text-xs font-semibold"
-                        style={{ background: 'rgba(232,197,71,0.14)', color: '#E8C547' }}
+                        style={{ background: 'rgba(243,106,34,0.14)', color: '#f36a22' }}
                       >
                         +{uplift}%
                       </span>
@@ -149,7 +149,7 @@ export default function Revenue() {
                       className="absolute left-0 top-0 h-full rounded-full"
                       style={{
                         width: basketInView ? `${(item.after / item.afterMax) * 100}%` : '0%',
-                        background: 'linear-gradient(to right, #E8C547, #F5A623)',
+                        background: 'linear-gradient(to right, #f36a22, #F5A623)',
                         transition: `width 1.1s cubic-bezier(0.22,1,0.36,1) ${i * 180}ms`,
                       }}
                     />
@@ -168,10 +168,10 @@ export default function Revenue() {
             </span>
             <div className="flex items-center gap-2">
               <span style={{ color: '#8B8FA8', fontSize: '15px', textDecoration: 'line-through' }}>R120</span>
-              <span style={{ color: '#E8C547', fontSize: '22px', fontWeight: 800 }}>R210+</span>
+              <span style={{ color: '#f36a22', fontSize: '22px', fontWeight: 800 }}>R210+</span>
               <span
                 className="px-2.5 py-1 rounded-full text-xs font-bold"
-                style={{ background: 'rgba(232,197,71,0.14)', color: '#E8C547' }}
+                style={{ background: 'rgba(243,106,34,0.14)', color: '#f36a22' }}
               >
                 +75%
               </span>
