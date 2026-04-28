@@ -36,7 +36,7 @@ export default function Products() {
 
   return (
     <section id="products" style={{ padding: '5rem 0' }}>
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
         <div className="text-center mb-14">
           <p
             className="font-semibold uppercase tracking-widest mb-3"
@@ -54,7 +54,7 @@ export default function Products() {
 
         <div
           ref={ref}
-          className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 w-full"
+          className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-8 md:px-16 w-full"
           style={{
             opacity:    inView ? 1 : 0,
             transform:  inView ? 'none' : 'translateY(40px)',
@@ -81,7 +81,7 @@ export default function Products() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-8 md:p-10 flex flex-col flex-1 w-full">
                 <h3 className="font-bold mb-2" style={{ color: '#F0EDE8', fontSize: '18px' }}>
                   {product.title}
                 </h3>
@@ -91,7 +91,7 @@ export default function Products() {
 
                 <ul className="space-y-2 mb-6">
                   {product.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-2" style={{ fontSize: '13px', color: '#B8B5C8' }}>
+                    <li key={j} className="flex items-start gap-3 mb-3" style={{ fontSize: '15px', color: '#B8B5C8', lineHeight: '1.6' }}>
                       <span style={{ color: '#f36a22', fontWeight: 700, flexShrink: 0 }}>✓</span>
                       {f}
                     </li>
@@ -102,7 +102,7 @@ export default function Products() {
                   href={STORE_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-6 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  className="flex items-center justify-center w-full gap-2 px-8 py-4 mt-8 rounded-xl text-base font-bold text-white transition-all hover:bg-[#d4561a] hover:scale-[1.02]"
                   style={{ background: '#f36a22' }}
                 >View in Store →
                 </a>

@@ -36,7 +36,7 @@ const SOCIALS = [
 export default function Footer() {
   return (
     <footer style={{ background: '#09091B', borderTop: '1px solid #252540' }}>
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Brand */}
           <div className="text-center md:text-left">

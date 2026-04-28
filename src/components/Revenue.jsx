@@ -30,7 +30,7 @@ export default function Revenue() {
 
   return (
     <section id="revenue" style={{ background: '#161626', padding: '5rem 0' }}>
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -48,7 +48,7 @@ export default function Revenue() {
             <span style={{ color: '#f36a22' }}>Revenue Driver</span>
           </h2>
           <p
-            className="mx-auto text-center leading-relaxed"
+            className="mx-auto text-center leading-relaxed mt-4"
             style={{ maxWidth: '560px', color: '#8B8FA8', fontSize: '16px' }}
           >
             Venues using iPAK are increasing average order values and creating entirely
@@ -59,7 +59,7 @@ export default function Revenue() {
         {/* Use case cards */}
         <div
           ref={cardsRef}
-          className="grid md:grid-cols-3 gap-5 mb-16 max-w-6xl mx-auto px-6 w-full"
+          className="grid md:grid-cols-3 gap-5 mb-16 max-w-7xl mx-auto px-8 md:px-16 w-full"
           style={{
             opacity:    cardsInView ? 1 : 0,
             transform:  cardsInView ? 'none' : 'translateY(40px)',
@@ -69,7 +69,7 @@ export default function Revenue() {
           {USE_CASES.map((uc, i) => (
             <div
               key={i}
-              className="rounded-2xl p-6"
+              className="rounded-2xl p-8 md:p-10 flex flex-col"
               style={{
                 background:      '#0D0D1A',
                 border:          '1px solid #252540',
@@ -90,7 +90,7 @@ export default function Revenue() {
         {/* Basket builder */}
         <div
           ref={basketRef}
-          className="rounded-2xl p-8 md:p-10"
+          className="rounded-2xl p-10 md:p-14"
           style={{
             background: '#0D0D1A',
             border:     '1px solid rgba(243,106,34,0.28)',

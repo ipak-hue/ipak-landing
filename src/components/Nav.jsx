@@ -31,7 +31,7 @@ export default function Nav() {
       }}
     >
       <div
-        className="max-w-6xl mx-auto px-6 flex items-center justify-between"
+        className="max-w-7xl mx-auto px-8 md:px-16 w-full flex items-center justify-between"
         style={{ height: '64px' }}
       >
         {/* Logo */}

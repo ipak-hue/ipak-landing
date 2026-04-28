@@ -38,16 +38,16 @@ export default function WhyIPak() {
 
   return (
     <section id="why-ipak" style={{ background: '#161626', padding: '5rem 0' }}>
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
         <div className="text-center mb-16">
           <p
-            className="font-semibold uppercase tracking-widest mb-3"
+            className="font-semibold uppercase tracking-widest mb-3 text-center w-full block"
             style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
           >
             Why iPAK
           </p>
           <h2
-            className="font-extrabold"
+            className="font-extrabold text-center w-full"
             style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
           >
             Built for <span style={{ color: '#f36a22' }}>SA Business</span>
@@ -56,7 +56,7 @@ export default function WhyIPak() {
 
         <div
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-6xl mx-auto px-6 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-7xl mx-auto px-8 md:px-16 w-full"
           style={{
             opacity: inView ? 1 : 0,
             transform: inView ? 'none' : 'translateY(40px)',
@@ -66,7 +66,7 @@ export default function WhyIPak() {
           {VALUES.map((v, i) => (
             <div
               key={i}
-              className="rounded-2xl p-6"
+              className="rounded-2xl p-8 md:p-10"
               style={{
                 background: '#0D0D1A',
                 border: '1px solid #252540',
