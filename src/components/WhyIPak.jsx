@@ -37,12 +37,12 @@ export default function WhyIPak() {
   const [ref, inView] = useInView()
 
   return (
-    <section id="why-ipak" style={{ background: '#161626', padding: '6rem 0' }}>
+    <section id="why-ipak" style={{ background: '#161626', padding: '5rem 0' }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p
             className="font-semibold uppercase tracking-widest mb-3"
-            style={{ fontSize: '11px', color: '#E8C547', letterSpacing: '0.12em' }}
+            style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
           >
             Why iPAK
           </p>
@@ -50,13 +50,13 @@ export default function WhyIPak() {
             className="font-extrabold"
             style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
           >
-            Built for <span style={{ color: '#E8C547' }}>SA Business</span>
+            Built for <span style={{ color: '#f36a22' }}>SA Business</span>
           </h2>
         </div>
 
         <div
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-6xl mx-auto px-6 w-full"
           style={{
             opacity: inView ? 1 : 0,
             transform: inView ? 'none' : 'translateY(40px)',
@@ -77,7 +77,7 @@ export default function WhyIPak() {
               <h3 className="font-bold mb-2" style={{ color: '#F0EDE8', fontSize: '15px' }}>
                 {v.title}
               </h3>
-              <p className="leading-relaxed" style={{ color: '#8B8FA8', fontSize: '13px' }}>
+              <p className="leading-relaxed text-center mx-auto max-w-2xl" style={{ color: '#8B8FA8', fontSize: '13px' }}>
                 {v.desc}
               </p>
             </div>

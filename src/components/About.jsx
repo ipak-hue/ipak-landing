@@ -8,7 +8,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6">
         <div
           ref={ref}
-          className="grid md:grid-cols-2 gap-16 items-center"
+          className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto px-6 w-full"
           style={{
             opacity:    inView ? 1 : 0,
             transform:  inView ? 'none' : 'translateY(40px)',

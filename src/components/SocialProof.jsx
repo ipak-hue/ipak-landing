@@ -15,7 +15,7 @@ export default function SocialProof() {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 py-7">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 w-full">
           {STATS.map((stat, i) => (
             <div key={i} className="text-center">
               <div

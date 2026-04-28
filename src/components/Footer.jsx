@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <span className="font-extrabold tracking-tight" style={{ fontSize: '24px', color: '#E8C547' }}>
+            <span className="font-extrabold tracking-tight" style={{ fontSize: '24px', color: '#f36a22' }}>
               iPAK
             </span>
             <p style={{ fontSize: '11px', color: '#8B8FA8', marginTop: '2px' }}>South Africa</p>
@@ -91,7 +91,7 @@ export default function Footer() {
                 className="transition-colors"
                 style={{ color: '#8B8FA8' }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.color = '#E8C547'
+                  e.currentTarget.style.color = '#f36a22'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.color = '#8B8FA8'

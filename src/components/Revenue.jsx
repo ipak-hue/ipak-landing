@@ -59,7 +59,7 @@ export default function Revenue() {
         {/* Use case cards */}
         <div
           ref={cardsRef}
-          className="grid md:grid-cols-3 gap-5 mb-16"
+          className="grid md:grid-cols-3 gap-5 mb-16 max-w-6xl mx-auto px-6 w-full"
           style={{
             opacity:    cardsInView ? 1 : 0,
             transform:  cardsInView ? 'none' : 'translateY(40px)',
@@ -80,7 +80,7 @@ export default function Revenue() {
               <h3 className="font-bold mb-2" style={{ color: '#F0EDE8', fontSize: '16px' }}>
                 {uc.title}
               </h3>
-              <p className="leading-relaxed" style={{ color: '#8B8FA8', fontSize: '14px' }}>
+              <p className="leading-relaxed text-center mx-auto max-w-2xl" style={{ color: '#8B8FA8', fontSize: '14px' }}>
                 {uc.desc}
               </p>
             </div>

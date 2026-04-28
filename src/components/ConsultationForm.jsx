@@ -24,7 +24,7 @@ function Field({ label, required, children }) {
         style={{ fontSize: '12px', color: '#8B8FA8' }}
       >
         {label}
-        {required && <span style={{ color: '#E8C547', marginLeft: '3px' }}>*</span>}
+        {required && <span style={{ color: '#f36a22', marginLeft: '3px' }}>*</span>}
       </label>
       {children}
     </div>
@@ -52,7 +52,7 @@ export default function ConsultationForm() {
   function getFieldStyle(name) {
     return {
       ...fieldStyle,
-      borderColor: focused === name ? '#E8C547' : '#252540',
+      borderColor: focused === name ? '#f36a22' : '#252540',
     }
   }
 
@@ -74,7 +74,7 @@ export default function ConsultationForm() {
   }
 
   return (
-    <section id="consultation" style={{ padding: '6rem 0' }}>
+    <section id="consultation" style={{ padding: '5rem 0' }}>
       <div className="max-w-2xl mx-auto px-6">
         <div
           ref={ref}
@@ -87,7 +87,7 @@ export default function ConsultationForm() {
           <div className="text-center mb-12">
             <p
               className="font-semibold uppercase tracking-widest mb-3"
-              style={{ fontSize: '11px', color: '#E8C547', letterSpacing: '0.12em' }}
+              style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
             >
               Free Consultation
             </p>
@@ -96,7 +96,7 @@ export default function ConsultationForm() {
               style={{ fontSize: 'clamp(1.8rem, 5vw, 2.6rem)', color: '#F0EDE8' }}
             >
               Find Out How Much iPAK Can{' '}
-              <span style={{ color: '#E8C547' }}>Add to Your Revenue</span>
+              <span style={{ color: '#f36a22' }}>Add to Your Revenue</span>
             </h2>
             <p style={{ color: '#8B8FA8', fontSize: '15px', lineHeight: 1.6 }}>
               Book a free 15-minute consultation and we'll show you exactly how iPAK fits
@@ -109,7 +109,7 @@ export default function ConsultationForm() {
               className="rounded-2xl p-12 text-center"
               style={{
                 background: '#161626',
-                border: '1px solid rgba(232,197,71,0.3)',
+                border: '1px solid rgba(243,106,34,0.3)',
               }}
             >
               <div className="text-6xl mb-4">🎉</div>
@@ -123,10 +123,10 @@ export default function ConsultationForm() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl p-7 md:p-9"
+              className="rounded-2xl p-7 md:p-9 max-w-2xl mx-auto px-6 w-full"
               style={{ background: '#161626', border: '1px solid #252540' }}
             >
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
+              <div className="grid sm:grid-cols-2 gap-4 mb-4 max-w-6xl mx-auto px-6 w-full">
                 <Field label="Full Name" required>
                   <input
                     type="text"
@@ -153,7 +153,7 @@ export default function ConsultationForm() {
                 </Field>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
+              <div className="grid sm:grid-cols-2 gap-4 mb-4 max-w-6xl mx-auto px-6 w-full">
                 <Field label="Business Type" required>
                   <div className="relative">
                     <select
@@ -195,7 +195,7 @@ export default function ConsultationForm() {
                 </Field>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-7">
+              <div className="grid sm:grid-cols-2 gap-4 mb-7 max-w-6xl mx-auto px-6 w-full">
                 <Field label="Monthly Revenue Range">
                   <div className="relative">
                     <select
@@ -260,8 +260,8 @@ export default function ConsultationForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 rounded-xl text-base font-bold transition-all hover:opacity-90 disabled:opacity-50"
-                style={{ background: '#E8C547', color: '#0D0D1A', cursor: loading ? 'not-allowed' : 'pointer' }}
+                className="w-full py-4 rounded-xl text-base font-bold transition-all hover:opacity-90 disabled:opacity-50 p-6"
+                style={{ background: '#f36a22', color: '#ffffff', cursor: loading ? 'not-allowed' : 'pointer' }}
               >
                 {loading ? 'Booking…' : 'Book My Free Consultation →'}
               </button>

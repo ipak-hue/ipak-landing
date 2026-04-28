@@ -54,7 +54,7 @@ export default function Products() {
 
         <div
           ref={ref}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 w-full"
           style={{
             opacity:    inView ? 1 : 0,
             transform:  inView ? 'none' : 'translateY(40px)',
@@ -64,7 +64,7 @@ export default function Products() {
           {PRODUCTS.map((product, i) => (
             <div
               key={i}
-              className="rounded-2xl overflow-hidden"
+              className="rounded-2xl overflow-hidden p-6"
               style={{ background: '#161626', border: '1px solid #252540' }}
             >
               {/* Image placeholder */}
@@ -104,8 +104,7 @@ export default function Products() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-6 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
                   style={{ background: '#f36a22' }}
-                >
-                  View in Store →
+                >View in Store →
                 </a>
               </div>
             </div>
