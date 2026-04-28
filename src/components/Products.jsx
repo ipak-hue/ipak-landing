@@ -35,76 +35,66 @@ export default function Products() {
   const [ref, inView] = useInView()
 
   return (
-    <section id="products" style={{ padding: '5rem 0' }}>
-      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
-        <div className="text-center mb-14">
-          <p
-            className="font-semibold uppercase tracking-widest mb-3"
-            style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
-          >
+    <section id="products" className="py-24 w-full">
+      <div className="max-w-6xl mx-auto px-6 w-full">
+        
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <p className="font-semibold uppercase tracking-widest mb-3 text-[#f36a22] text-xs">
             The System
           </p>
-          <h2
-            className="font-extrabold"
-            style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
-          >
-            The <span style={{ color: '#f36a22' }}>iPAK</span> System
+          <h2 className="font-extrabold text-[#F0EDE8] text-4xl md:text-5xl">
+            The <span className="text-[#f36a22]">iPAK</span> System
           </h2>
         </div>
 
+        {/* Grid Layout */}
         <div
           ref={ref}
-          className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-8 md:px-16 w-full"
+          className="grid md:grid-cols-2 gap-8 w-full"
           style={{
-            opacity:    inView ? 1 : 0,
-            transform:  inView ? 'none' : 'translateY(40px)',
+            opacity: inView ? 1 : 0,
+            transform: inView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
           {PRODUCTS.map((product, i) => (
             <div
               key={i}
-              className="rounded-2xl overflow-hidden p-6"
-              style={{ background: '#161626', border: '1px solid #252540' }}
+              className="rounded-3xl overflow-hidden bg-[#161626] border border-[#252540] flex flex-col shadow-2xl"
             >
-              {/* Image placeholder */}
-              <div
-                className="flex flex-col items-center justify-center gap-3"
-                style={{
-                  aspectRatio:   '16/9',
-                  background:    '#1E1E32',
-                  borderBottom:  '1px solid #252540',
-                }}
-              >
-                <div style={{ fontSize: '52px' }}>{product.icon}</div>
-                <span style={{ fontSize: '12px', color: '#8B8FA8' }}>Product Image</span>
+              {/* Image Placeholder */}
+              <div className="flex flex-col items-center justify-center gap-3 aspect-[16/9] bg-[#1E1E32] border-b border-[#252540]">
+                <div className="text-6xl">{product.icon}</div>
+                <span className="text-sm text-[#8B8FA8]">Product Image</span>
               </div>
 
-              {/* Content */}
-              <div className="p-8 md:p-10 flex flex-col flex-1 w-full">
-                <h3 className="font-bold mb-2" style={{ color: '#F0EDE8', fontSize: '18px' }}>
+              {/* Content Box (Massive Padding) */}
+              <div className="p-8 md:p-12 flex flex-col flex-1 w-full">
+                <h3 className="font-bold mb-3 text-2xl text-[#F0EDE8]">
                   {product.title}
                 </h3>
-                <p className="mb-5 leading-relaxed" style={{ color: '#8B8FA8', fontSize: '14px' }}>
+                <p className="mb-8 leading-relaxed text-[#8B8FA8] text-base">
                   {product.desc}
                 </p>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-4 mb-10 flex-1">
                   {product.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-3 mb-3" style={{ fontSize: '15px', color: '#B8B5C8', lineHeight: '1.6' }}>
-                      <span style={{ color: '#f36a22', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                    <li key={j} className="flex items-start gap-3 text-[#B8B5C8] text-base">
+                      <span className="text-[#f36a22] font-bold mt-0.5">✓</span>
                       {f}
                     </li>
                   ))}
                 </ul>
 
+                {/* Full-Width Premium Button */}
                 <a
                   href={STORE_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full gap-2 px-8 py-4 mt-8 rounded-xl text-base font-bold text-white transition-all hover:bg-[#d4561a] hover:scale-[1.02]"
-                  style={{ background: '#f36a22' }}
-                >View in Store →
+                  className="mt-auto flex items-center justify-center w-full gap-2 px-8 py-5 rounded-xl text-lg font-bold text-white bg-[#f36a22] transition-transform hover:scale-[1.02]"
+                >
+                  View in Store →
                 </a>
               </div>
             </div>
