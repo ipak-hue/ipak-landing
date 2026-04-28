@@ -7,7 +7,7 @@ export default function Hero({ videoUrl, loading }) {
       className="relative flex items-center justify-center overflow-hidden"
       style={{ minHeight: '100svh' }}
     >
-      {/* ── Background ── */}
+      {/* Background */}
       {!loading && videoUrl ? (
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -21,27 +21,23 @@ export default function Hero({ videoUrl, loading }) {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'radial-gradient(ellipse 80% 60% at 50% 0%, #2A1060 0%, #0D0D1A 65%)',
+            background: 'radial-gradient(ellipse 80% 60% at 50% 0%, #3A1800 0%, #0D0D1A 65%)',
           }}
         />
       )}
 
       {/* Dark overlay */}
-      <div
-        className="absolute inset-0"
-        style={{ background: 'rgba(13,13,26,0.60)' }}
-      />
+      <div className="absolute inset-0" style={{ background: 'rgba(13,13,26,0.60)' }} />
 
-      {/* ── Content ── */}
+      {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
         {/* Badge */}
         <div
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-8"
           style={{
-            background: 'rgba(232,197,71,0.12)',
-            border: '1px solid rgba(232,197,71,0.35)',
-            color: '#E8C547',
+            background: 'rgba(243,106,34,0.14)',
+            border: '1px solid rgba(243,106,34,0.4)',
+            color: '#f36a22',
           }}
         >
           🇿🇦 Now Available in South Africa
@@ -53,7 +49,7 @@ export default function Hero({ videoUrl, loading }) {
           style={{ fontSize: 'clamp(2.6rem, 8vw, 5rem)', color: '#F0EDE8' }}
         >
           Seal More. Sell More.{' '}
-          <span style={{ color: '#E8C547' }}>Stand Out.</span>
+          <span style={{ color: '#f36a22' }}>Stand Out.</span>
         </h1>
 
         {/* Subheadline */}
@@ -75,8 +71,8 @@ export default function Hero({ videoUrl, loading }) {
             href={STORE_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 rounded-xl text-base font-bold transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
-            style={{ background: '#E8C547', color: '#0D0D1A' }}
+            className="px-8 py-4 rounded-xl text-base font-bold text-white transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
+            style={{ background: '#f36a22' }}
           >
             Shop Now →
           </a>

@@ -35,12 +35,12 @@ export default function Products() {
   const [ref, inView] = useInView()
 
   return (
-    <section id="products" style={{ padding: '6rem 0' }}>
+    <section id="products" style={{ padding: '5rem 0' }}>
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <p
             className="font-semibold uppercase tracking-widest mb-3"
-            style={{ fontSize: '11px', color: '#E8C547', letterSpacing: '0.12em' }}
+            style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
           >
             The System
           </p>
@@ -48,7 +48,7 @@ export default function Products() {
             className="font-extrabold"
             style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
           >
-            The <span style={{ color: '#E8C547' }}>iPAK</span> System
+            The <span style={{ color: '#f36a22' }}>iPAK</span> System
           </h2>
         </div>
 
@@ -56,8 +56,8 @@ export default function Products() {
           ref={ref}
           className="grid md:grid-cols-2 gap-8"
           style={{
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'none' : 'translateY(40px)',
+            opacity:    inView ? 1 : 0,
+            transform:  inView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
@@ -71,9 +71,9 @@ export default function Products() {
               <div
                 className="flex flex-col items-center justify-center gap-3"
                 style={{
-                  aspectRatio: '16/9',
-                  background: '#1E1E32',
-                  borderBottom: '1px solid #252540',
+                  aspectRatio:   '16/9',
+                  background:    '#1E1E32',
+                  borderBottom:  '1px solid #252540',
                 }}
               >
                 <div style={{ fontSize: '52px' }}>{product.icon}</div>
@@ -81,7 +81,7 @@ export default function Products() {
               </div>
 
               {/* Content */}
-              <div className="p-7">
+              <div className="p-6">
                 <h3 className="font-bold mb-2" style={{ color: '#F0EDE8', fontSize: '18px' }}>
                   {product.title}
                 </h3>
@@ -89,10 +89,10 @@ export default function Products() {
                   {product.desc}
                 </p>
 
-                <ul className="space-y-2 mb-7">
+                <ul className="space-y-2 mb-6">
                   {product.features.map((f, j) => (
                     <li key={j} className="flex items-center gap-2" style={{ fontSize: '13px', color: '#B8B5C8' }}>
-                      <span style={{ color: '#E8C547', fontWeight: 700 }}>✓</span>
+                      <span style={{ color: '#f36a22', fontWeight: 700, flexShrink: 0 }}>✓</span>
                       {f}
                     </li>
                   ))}
@@ -102,8 +102,8 @@ export default function Products() {
                   href={STORE_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90"
-                  style={{ background: '#E8C547', color: '#0D0D1A' }}
+                  className="inline-flex items-center gap-1.5 px-6 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ background: '#f36a22' }}
                 >
                   View in Store →
                 </a>

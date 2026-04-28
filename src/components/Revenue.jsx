@@ -19,17 +19,17 @@ const USE_CASES = [
 ]
 
 const BASKET = [
-  { label: 'Iced Coffee',  before: 45, after: 85,  afterMax: 120 },
-  { label: 'Cold Brew',    before: 55, after: 100, afterMax: 130 },
-  { label: 'Cocktail',     before: 95, after: 160, afterMax: 200 },
+  { label: 'Iced Coffee', before: 45, after: 85,  afterMax: 120 },
+  { label: 'Cold Brew',   before: 55, after: 100, afterMax: 130 },
+  { label: 'Cocktail',    before: 95, after: 160, afterMax: 200 },
 ]
 
 export default function Revenue() {
-  const [cardsRef, cardsInView] = useInView()
+  const [cardsRef,  cardsInView]  = useInView()
   const [basketRef, basketInView] = useInView()
 
   return (
-    <section id="revenue" style={{ background: '#161626', padding: '6rem 0' }}>
+    <section id="revenue" style={{ background: '#161626', padding: '5rem 0' }}>
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
@@ -48,7 +48,7 @@ export default function Revenue() {
             <span style={{ color: '#f36a22' }}>Revenue Driver</span>
           </h2>
           <p
-            className="mx-auto leading-relaxed"
+            className="mx-auto text-center leading-relaxed"
             style={{ maxWidth: '560px', color: '#8B8FA8', fontSize: '16px' }}
           >
             Venues using iPAK are increasing average order values and creating entirely
@@ -61,8 +61,8 @@ export default function Revenue() {
           ref={cardsRef}
           className="grid md:grid-cols-3 gap-5 mb-16"
           style={{
-            opacity: cardsInView ? 1 : 0,
-            transform: cardsInView ? 'none' : 'translateY(40px)',
+            opacity:    cardsInView ? 1 : 0,
+            transform:  cardsInView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.65s ease, transform 0.65s ease',
           }}
         >
@@ -71,8 +71,8 @@ export default function Revenue() {
               key={i}
               className="rounded-2xl p-6"
               style={{
-                background: '#0D0D1A',
-                border: '1px solid #252540',
+                background:      '#0D0D1A',
+                border:          '1px solid #252540',
                 transitionDelay: `${i * 100}ms`,
               }}
             >
@@ -93,9 +93,9 @@ export default function Revenue() {
           className="rounded-2xl p-8 md:p-10"
           style={{
             background: '#0D0D1A',
-            border: '1px solid rgba(243,106,34,0.28)',
-            opacity: basketInView ? 1 : 0,
-            transform: basketInView ? 'none' : 'translateY(40px)',
+            border:     '1px solid rgba(243,106,34,0.28)',
+            opacity:    basketInView ? 1 : 0,
+            transform:  basketInView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
@@ -132,8 +132,6 @@ export default function Revenue() {
                       </span>
                     </div>
                   </div>
-
-                  {/* Progress bars */}
                   <div
                     className="relative h-2 rounded-full overflow-hidden"
                     style={{ background: '#252540' }}
@@ -141,15 +139,15 @@ export default function Revenue() {
                     <div
                       className="absolute left-0 top-0 h-full rounded-full"
                       style={{
-                        width: `${(item.before / item.afterMax) * 100}%`,
+                        width:      `${(item.before / item.afterMax) * 100}%`,
                         background: 'rgba(139,143,168,0.35)',
                       }}
                     />
                     <div
                       className="absolute left-0 top-0 h-full rounded-full"
                       style={{
-                        width: basketInView ? `${(item.after / item.afterMax) * 100}%` : '0%',
-                        background: 'linear-gradient(to right, #f36a22, #F5A623)',
+                        width:      basketInView ? `${(item.after / item.afterMax) * 100}%` : '0%',
+                        background: 'linear-gradient(to right, #f36a22, #f59644)',
                         transition: `width 1.1s cubic-bezier(0.22,1,0.36,1) ${i * 180}ms`,
                       }}
                     />

@@ -4,14 +4,14 @@ export default function About() {
   const [ref, inView] = useInView()
 
   return (
-    <section id="about" style={{ padding: '6rem 0' }}>
+    <section id="about" style={{ padding: '5rem 0' }}>
       <div className="max-w-6xl mx-auto px-6">
         <div
           ref={ref}
           className="grid md:grid-cols-2 gap-16 items-center"
           style={{
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'none' : 'translateY(40px)',
+            opacity:    inView ? 1 : 0,
+            transform:  inView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
@@ -19,7 +19,7 @@ export default function About() {
           <div>
             <p
               className="font-semibold uppercase tracking-widest mb-3"
-              style={{ fontSize: '11px', color: '#E8C547', letterSpacing: '0.12em' }}
+              style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
             >
               What Is iPAK?
             </p>
@@ -28,7 +28,7 @@ export default function About() {
               style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
             >
               Fresh Products.<br />
-              <span style={{ color: '#E8C547' }}>Sealed in Seconds.</span>
+              <span style={{ color: '#f36a22' }}>Sealed in Seconds.</span>
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: '#B8B5C8', fontSize: '16px' }}>
               iPAK is revolutionising the way businesses package fresh products with our
@@ -48,9 +48,9 @@ export default function About() {
                   key={tag}
                   className="px-3 py-1 rounded-full text-xs font-medium"
                   style={{
-                    background: 'rgba(232,197,71,0.1)',
-                    border: '1px solid rgba(232,197,71,0.25)',
-                    color: '#E8C547',
+                    background: 'rgba(243,106,34,0.1)',
+                    border:     '1px solid rgba(243,106,34,0.28)',
+                    color:      '#f36a22',
                   }}
                 >
                   {tag}
@@ -59,26 +59,21 @@ export default function About() {
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Visual placeholder */}
           <div
             className="rounded-2xl flex flex-col items-center justify-center gap-6 p-10"
             style={{
               background: '#161626',
-              border: '1px solid #252540',
-              minHeight: '360px',
+              border:     '1px solid #252540',
+              minHeight:  '360px',
             }}
           >
-            <div className="text-7xl">🥤</div>
+            <div style={{ fontSize: '72px' }}>🥤</div>
             <div className="text-center">
-              <p
-                className="font-semibold mb-1"
-                style={{ color: '#F0EDE8', fontSize: '15px' }}
-              >
+              <p className="font-semibold mb-1" style={{ color: '#F0EDE8', fontSize: '15px' }}>
                 Branded Sealable Cans
               </p>
-              <p style={{ color: '#8B8FA8', fontSize: '13px' }}>
-                Product image coming soon
-              </p>
+              <p style={{ color: '#8B8FA8', fontSize: '13px' }}>Product image coming soon</p>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,13 +6,13 @@
   --color-surface:  #161626;
   --color-surface2: #1E1E32;
   --color-border:   #252540;
-  --color-gold:     #E8C547;
+  --color-orange:   #f36a22;
   --color-green:    #25D366;
   --color-text:     #F0EDE8;
   --color-muted:    #8B8FA8;
   --color-red:      #EF4444;
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
 }
 
 *, *::before, *::after {
@@ -29,7 +29,7 @@ html {
 body {
   background: #0D0D1A;
   color: #F0EDE8;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 select option {

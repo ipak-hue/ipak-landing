@@ -8,12 +8,12 @@ const LINKS = [
   { href: '#consultation', label: 'Free Consultation' },
 ]
 
-const WA_LINK = 'https://wa.me/27000000000'
+const WA_LINK    = 'https://wa.me/27000000000'
 const STORE_LINK = 'https://store.ipaksouthafrica.co.za'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [open, setOpen]         = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -25,9 +25,9 @@ export default function Nav() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(13,13,26,0.94)' : 'transparent',
+        background:     scrolled ? 'rgba(13,13,26,0.94)' : 'transparent',
         backdropFilter: scrolled ? 'blur(14px)' : 'none',
-        borderBottom: scrolled ? '1px solid #252540' : 'none',
+        borderBottom:   scrolled ? '1px solid #252540' : 'none',
       }}
     >
       <div
@@ -38,7 +38,7 @@ export default function Nav() {
         <a href="#" className="flex items-baseline gap-1.5 shrink-0">
           <span
             className="font-extrabold tracking-tight"
-            style={{ fontSize: '22px', color: '#E8C547' }}
+            style={{ fontSize: '22px', color: '#f36a22' }}
           >
             iPAK
           </span>
@@ -69,7 +69,7 @@ export default function Nav() {
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90 shrink-0"
-          style={{ background: '#E8C547', color: '#0D0D1A' }}
+          style={{ background: '#f36a22', color: '#ffffff' }}
         >
           Shop Now →
         </a>
@@ -115,8 +115,8 @@ export default function Nav() {
               href={STORE_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 py-3 rounded-lg text-center text-sm font-semibold"
-              style={{ background: '#E8C547', color: '#0D0D1A' }}
+              className="flex-1 py-3 rounded-lg text-center text-sm font-semibold text-white"
+              style={{ background: '#f36a22' }}
             >
               Shop Now
             </a>
