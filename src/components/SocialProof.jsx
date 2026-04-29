@@ -14,8 +14,8 @@ export default function SocialProof() {
         borderBottom: '1px solid rgba(243,106,34,0.2)',
       }}
     >
-      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-7">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto px-8 md:px-16 w-full">
+      <div className="max-w-6xl mx-auto px-6 py-7">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
           {STATS.map((stat, i) => (
             <div key={i} className="text-center">
               <div

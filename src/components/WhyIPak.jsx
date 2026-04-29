@@ -38,7 +38,7 @@ export default function WhyIPak() {
 
   return (
     <section id="why-ipak" style={{ background: '#161626', padding: '5rem 0' }}>
-      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p
             className="font-semibold uppercase tracking-widest mb-3 text-center w-full block"
@@ -56,7 +56,7 @@ export default function WhyIPak() {
 
         <div
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-7xl mx-auto px-8 md:px-16 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-6xl mx-auto px-6"
           style={{
             opacity: inView ? 1 : 0,
             transform: inView ? 'none' : 'translateY(40px)',

@@ -5,10 +5,10 @@ export default function About() {
 
   return (
     <section id="about" style={{ padding: '5rem 0' }}>
-      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
+      <div className="max-w-6xl mx-auto px-6">
         <div
           ref={ref}
-          className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto px-8 md:px-16 w-full"
+          className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto px-6"
           style={{
             opacity:    inView ? 1 : 0,
             transform:  inView ? 'none' : 'translateY(40px)',

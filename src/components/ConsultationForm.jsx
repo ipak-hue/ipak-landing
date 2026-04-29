@@ -126,7 +126,7 @@ export default function ConsultationForm() {
               className="rounded-2xl p-7 md:p-9 max-w-2xl mx-auto px-6 w-full"
               style={{ background: '#161626', border: '1px solid #252540' }}
             >
-              <div className="grid sm:grid-cols-2 gap-4 mb-4 max-w-7xl mx-auto px-8 md:px-16 w-full">
+              <div className="grid sm:grid-cols-2 gap-4 mb-4 max-w-6xl mx-auto px-6">
                 <Field label="Full Name" required>
                   <input
                     type="text"
@@ -153,7 +153,7 @@ export default function ConsultationForm() {
                 </Field>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-4 max-w-7xl mx-auto px-8 md:px-16 w-full">
+              <div className="grid sm:grid-cols-2 gap-4 mb-4 max-w-6xl mx-auto px-6">
                 <Field label="Business Type" required>
                   <div className="relative">
                     <select
@@ -195,7 +195,7 @@ export default function ConsultationForm() {
                 </Field>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-7 max-w-7xl mx-auto px-8 md:px-16 w-full">
+              <div className="grid sm:grid-cols-2 gap-4 mb-7 max-w-6xl mx-auto px-6">
                 <Field label="Monthly Revenue Range">
                   <div className="relative">
                     <select

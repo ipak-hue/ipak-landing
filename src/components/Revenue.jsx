@@ -30,7 +30,7 @@ export default function Revenue() {
 
   return (
     <section id="revenue" style={{ background: '#161626', padding: '5rem 0' }}>
-      <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
+      <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -59,7 +59,7 @@ export default function Revenue() {
         {/* Use case cards */}
         <div
           ref={cardsRef}
-          className="grid md:grid-cols-3 gap-5 mb-16 max-w-7xl mx-auto px-8 md:px-16 w-full"
+          className="grid md:grid-cols-3 gap-5 mb-16 max-w-6xl mx-auto px-6"
           style={{
             opacity:    cardsInView ? 1 : 0,
             transform:  cardsInView ? 'none' : 'translateY(40px)',
