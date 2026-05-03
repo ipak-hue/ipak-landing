@@ -33,3 +33,17 @@ select option {
 input::placeholder {
   color: #666;
 }
+
+/* Desktop: show nav buttons, hide sticky bar, show hero button */
+@media (min-width: 768px) {
+  .mobile-sticky-bar { display: none !important; }
+  .desktop-nav-buttons { display: flex !important; }
+  .hero-shop-btn { display: inline-flex !important; }
+}
+
+/* Mobile: hide nav buttons, show sticky bar, hide hero button */
+@media (max-width: 767px) {
+  .desktop-nav-buttons { display: none !important; }
+  .mobile-sticky-bar { display: flex !important; }
+  .hero-shop-btn { display: none !important; }
+}

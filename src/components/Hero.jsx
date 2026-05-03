@@ -19,7 +19,8 @@ export default function Hero() {
             <p style={{ color: '#A8A8B3', fontSize: '16px', lineHeight: 1.6, marginBottom: '2rem', maxWidth: '480px' }}>
               iPAK gives SA hospitality, retail & events the power to package fresh products in branded sealable cans — on-site, in seconds.
             </p>
-            <a href={STORE_URL} target="_blank" rel="noopener noreferrer"
+            {/* Desktop only button */}
+            <a href={STORE_URL} target="_blank" rel="noopener noreferrer" className="hero-shop-btn"
               style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: '#f36a22', color: '#FFFFFF', padding: '14px 32px', borderRadius: '999px', fontSize: '15px', fontWeight: 700, textDecoration: 'none', letterSpacing: '0.02em' }}>
               SHOP NOW
             </a>
