@@ -12,9 +12,9 @@ export default function Hero() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
 
           <div style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'none' : 'translateY(20px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, lineHeight: 1.05, color: '#FFFFFF', marginBottom: '1.5rem' }}>
-              Seal More. Sell More.<br />
-              <span style={{ color: '#f36a22' }}>Stand Out.</span>
+            <h1 style={{ fontWeight: 800, lineHeight: 1.05, color: '#FFFFFF', marginBottom: '1.5rem' }}>
+              <span style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', display: 'block' }}>Seal More. Sell More.</span>
+              <span style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#f36a22', display: 'block' }}>Stand Out.</span>
             </h1>
             <p style={{ color: '#A8A8B3', fontSize: '16px', lineHeight: 1.6, marginBottom: '2rem', maxWidth: '480px' }}>
               iPAK gives SA hospitality, retail & events the power to package fresh products in branded sealable cans — on-site, in seconds.
