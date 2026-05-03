@@ -46,4 +46,6 @@ input::placeholder {
   .desktop-nav-buttons { display: none !important; }
   .mobile-sticky-bar { display: flex !important; }
   .hero-shop-btn { display: none !important; }
+  .hero-inner-grid { gap: 1.25rem !important; }
+  .hero-lead { margin-bottom: 1rem !important; }
 }
