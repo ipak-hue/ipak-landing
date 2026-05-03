@@ -19,163 +19,220 @@ const USE_CASES = [
 ]
 
 const BASKET = [
-  { label: 'Iced Coffee', before: 45, after: 85,  afterMax: 120 },
-  { label: 'Cold Brew',   before: 55, after: 100, afterMax: 130 },
-  { label: 'Cocktail',    before: 95, after: 160, afterMax: 200 },
+  { label: 'Iced Coffee', before: 45, after: 85, afterMax: 120, uplift: 89 },
+  { label: 'Cold Brew', before: 55, after: 100, afterMax: 130, uplift: 82 },
+  { label: 'Cocktail', before: 95, after: 160, afterMax: 200, uplift: 68 },
 ]
 
 export default function Revenue() {
-  const [cardsRef,  cardsInView]  = useInView()
+  const [headerRef, headerInView] = useInView()
+  const [casesRef, casesInView] = useInView()
   const [basketRef, basketInView] = useInView()
 
   return (
-    <section id="revenue" style={{ background: '#161626', padding: '5rem 0' }}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="revenue" style={{ background: '#000000', padding: '6rem 0' }}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className="text-center mb-14"
+          style={{
+            opacity: headerInView ? 1 : 0,
+            transform: headerInView ? 'none' : 'translateY(20px)',
+            transition: 'opacity 0.6s ease, transform 0.6s ease',
+          }}
+        >
           <p
-            className="font-semibold uppercase tracking-widest mb-3"
-            style={{ fontSize: '11px', color: '#f36a22', letterSpacing: '0.12em' }}
+            className="font-bold uppercase mb-4"
+            style={{ fontSize: '12px', color: '#f36a22', letterSpacing: '0.18em' }}
           >
             Revenue Impact
           </p>
           <h2
-            className="font-extrabold leading-tight mb-4"
-            style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#F0EDE8' }}
+            className="font-extrabold tracking-tight mb-4"
+            style={{
+              fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
+              lineHeight: 1.1,
+              color: '#FFFFFF',
+            }}
           >
             Turn Every Drink Into a{' '}
             <span style={{ color: '#f36a22' }}>Revenue Driver</span>
           </h2>
           <p
-            className="mx-auto text-center leading-relaxed mt-4"
-            style={{ maxWidth: '560px', color: '#8B8FA8', fontSize: '16px' }}
+            className="mx-auto"
+            style={{
+              maxWidth: '640px',
+              color: '#A8A8B3',
+              fontSize: '16px',
+              lineHeight: 1.6,
+            }}
           >
-            Venues using iPAK are increasing average order values and creating entirely
-            new product lines from their existing setup.
+            Venues using iPAK are increasing average order values and creating entirely new product lines from their existing setup.
           </p>
         </div>
 
-        {/* Use case cards */}
+        {/* Use cases + can image */}
         <div
-          ref={cardsRef}
-          className="grid md:grid-cols-3 gap-5 mb-16 max-w-6xl mx-auto px-6"
+          ref={casesRef}
+          className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16"
           style={{
-            opacity:    cardsInView ? 1 : 0,
-            transform:  cardsInView ? 'none' : 'translateY(40px)',
-            transition: 'opacity 0.65s ease, transform 0.65s ease',
+            opacity: casesInView ? 1 : 0,
+            transform: casesInView ? 'none' : 'translateY(40px)',
+            transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
-          {USE_CASES.map((uc, i) => (
-            <div
-              key={i}
-              className="rounded-2xl p-8 md:p-10 flex flex-col"
+          {/* Left: 3 use case rows */}
+          <div className="space-y-7">
+            {USE_CASES.map((uc, i) => (
+              <div key={i} className="flex gap-4 items-start">
+                <div
+                  style={{
+                    fontSize: '32px',
+                    flexShrink: 0,
+                    width: '48px',
+                    textAlign: 'center',
+                  }}
+                >
+                  {uc.icon}
+                </div>
+                <div>
+                  <h3
+                    className="font-bold mb-2"
+                    style={{ color: '#FFFFFF', fontSize: '18px' }}
+                  >
+                    {uc.title}
+                  </h3>
+                  <p style={{ color: '#A8A8B3', fontSize: '15px', lineHeight: 1.6 }}>
+                    {uc.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right: Can top image */}
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src="/images/can-top.png"
+              alt="Sealed can top view"
               style={{
-                background:      '#0D0D1A',
-                border:          '1px solid #252540',
-                transitionDelay: `${i * 100}ms`,
+                maxWidth: '380px',
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain',
               }}
-            >
-              <div className="text-4xl mb-4">{uc.icon}</div>
-              <h3 className="font-bold mb-2" style={{ color: '#F0EDE8', fontSize: '16px' }}>
-                {uc.title}
-              </h3>
-              <p className="leading-relaxed text-center mx-auto max-w-2xl" style={{ color: '#8B8FA8', fontSize: '14px' }}>
-                {uc.desc}
-              </p>
-            </div>
-          ))}
+            />
+          </div>
         </div>
 
-        {/* Basket builder */}
+        {/* Basket Builder */}
         <div
           ref={basketRef}
-          className="rounded-2xl p-10 md:p-14"
           style={{
-            background: '#0D0D1A',
-            border:     '1px solid rgba(243,106,34,0.28)',
-            opacity:    basketInView ? 1 : 0,
-            transform:  basketInView ? 'none' : 'translateY(40px)',
+            opacity: basketInView ? 1 : 0,
+            transform: basketInView ? 'none' : 'translateY(40px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
           <div className="text-center mb-8">
-            <h3 className="font-bold mb-1" style={{ color: '#F0EDE8', fontSize: '20px' }}>
-              The iPAK Basket Builder
+            <h3
+              className="font-bold mb-1"
+              style={{ color: '#FFFFFF', fontSize: '22px' }}
+            >
+              The iPAK <span style={{ color: '#f36a22' }}>Basket Builder</span>
             </h3>
-            <p style={{ color: '#8B8FA8', fontSize: '13px' }}>
+            <p style={{ color: '#A8A8B3', fontSize: '14px' }}>
               Average selling price — before and after iPAK
             </p>
           </div>
 
-          <div className="space-y-7">
-            {BASKET.map((item, i) => {
-              const uplift = Math.round((item.after / item.before - 1) * 100)
-              return (
-                <div key={i}>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-medium" style={{ color: '#F0EDE8', fontSize: '14px' }}>
-                      {item.label}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <span style={{ color: '#8B8FA8', fontSize: '13px', textDecoration: 'line-through' }}>
-                        R{item.before}
-                      </span>
-                      <span className="font-bold" style={{ color: '#f36a22', fontSize: '14px' }}>
-                        R{item.after}–R{item.afterMax}
-                      </span>
-                      <span
-                        className="px-2 py-0.5 rounded-full text-xs font-semibold"
-                        style={{ background: 'rgba(243,106,34,0.14)', color: '#f36a22' }}
-                      >
-                        +{uplift}%
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="relative h-2 rounded-full overflow-hidden"
-                    style={{ background: '#252540' }}
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {BASKET.map((item, i) => (
+              <div key={i}>
+                <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                  <span
+                    className="font-semibold"
+                    style={{ color: '#FFFFFF', fontSize: '15px' }}
                   >
-                    <div
-                      className="absolute left-0 top-0 h-full rounded-full"
+                    {item.label}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span
                       style={{
-                        width:      `${(item.before / item.afterMax) * 100}%`,
-                        background: 'rgba(139,143,168,0.35)',
+                        color: '#666',
+                        fontSize: '13px',
+                        textDecoration: 'line-through',
                       }}
-                    />
-                    <div
-                      className="absolute left-0 top-0 h-full rounded-full"
-                      style={{
-                        width:      basketInView ? `${(item.after / item.afterMax) * 100}%` : '0%',
-                        background: 'linear-gradient(to right, #f36a22, #f59644)',
-                        transition: `width 1.1s cubic-bezier(0.22,1,0.36,1) ${i * 180}ms`,
-                      }}
-                    />
+                    >
+                      R{item.before}
+                    </span>
+                    <span
+                      className="font-bold"
+                      style={{ color: '#f36a22', fontSize: '15px' }}
+                    >
+                      R{item.after}–R{item.afterMax}
+                    </span>
+                    <span
+                      className="px-2 py-0.5 rounded-full text-xs font-bold"
+                      style={{ background: 'rgba(243,106,34,0.15)', color: '#f36a22' }}
+                    >
+                      +{item.uplift}%
+                    </span>
                   </div>
                 </div>
-              )
-            })}
+                <div
+                  className="relative h-2 rounded-full overflow-hidden"
+                  style={{ background: '#1A1A1A' }}
+                >
+                  <div
+                    className="absolute left-0 top-0 h-full"
+                    style={{
+                      width: basketInView
+                        ? `${(item.after / item.afterMax) * 100}%`
+                        : '0%',
+                      background: '#f36a22',
+                      transition: `width 1.1s cubic-bezier(0.22,1,0.36,1) ${i * 180}ms`,
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
 
           <div
-            className="mt-8 pt-6 flex flex-wrap items-center justify-center gap-3"
-            style={{ borderTop: '1px solid #252540' }}
+            className="mt-8 pt-6 flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto"
+            style={{ borderTop: '1px solid #1A1A1A' }}
           >
-            <span style={{ color: '#8B8FA8', fontSize: '14px' }}>
+            <span style={{ color: '#A8A8B3', fontSize: '15px' }}>
               Average basket with iPAK:
             </span>
             <div className="flex items-center gap-2">
-              <span style={{ color: '#8B8FA8', fontSize: '15px', textDecoration: 'line-through' }}>R120</span>
-              <span style={{ color: '#f36a22', fontSize: '22px', fontWeight: 800 }}>R210+</span>
+              <span
+                style={{
+                  color: '#666',
+                  fontSize: '15px',
+                  textDecoration: 'line-through',
+                }}
+              >
+                R120
+              </span>
+              <span
+                style={{ color: '#f36a22', fontSize: '24px', fontWeight: 800 }}
+              >
+                R210+
+              </span>
               <span
                 className="px-2.5 py-1 rounded-full text-xs font-bold"
-                style={{ background: 'rgba(243,106,34,0.14)', color: '#f36a22' }}
+                style={{ background: 'rgba(243,106,34,0.15)', color: '#f36a22' }}
               >
                 +75%
               </span>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

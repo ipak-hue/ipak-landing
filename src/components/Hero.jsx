@@ -1,101 +1,104 @@
-const STORE_LINK = 'https://store.ipaksouthafrica.co.za'
-const WA_LINK    = 'https://wa.me/27000000000'
+import { useEffect, useState } from 'react'
 
-export default function Hero({ videoUrl, loading }) {
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '27000000000'
+const STORE_URL = import.meta.env.VITE_STORE_URL || '#'
+
+export default function Hero() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
+
   return (
     <section
-      className="relative flex items-center justify-center overflow-hidden"
-      style={{ minHeight: '100svh' }}
+      id="hero"
+      style={{
+        background: '#000000',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        paddingTop: '6rem',
+        paddingBottom: '4rem',
+      }}
     >
-      {/* Background */}
-      {!loading && videoUrl ? (
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src={videoUrl}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-      ) : (
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(ellipse 80% 60% at 50% 0%, #3A1800 0%, #0D0D1A 65%)',
-          }}
-        />
-      )}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0" style={{ background: 'rgba(13,13,26,0.60)' }} />
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-        {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-8"
-          style={{
-            background: 'rgba(243,106,34,0.14)',
-            border: '1px solid rgba(243,106,34,0.4)',
-            color: '#f36a22',
-          }}
-        >
-          🇿🇦 Now Available in South Africa
-        </div>
-
-        {/* Headline */}
-        <h1
-          className="font-extrabold leading-tight mb-6"
-          style={{ fontSize: 'clamp(2.6rem, 8vw, 5rem)', color: '#F0EDE8' }}
-        >
-          Seal More. Sell More.{' '}
-          <span style={{ color: '#f36a22' }}>Stand Out.</span>
-        </h1>
-
-        {/* Subheadline */}
-        <p
-          className="mx-auto mb-10 leading-relaxed"
-          style={{
-            maxWidth: '620px',
-            fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-            color: '#B8B5C8',
-          }}
-        >
-          iPAK gives SA hospitality and retail businesses the power to package
-          and sell fresh products in branded sealable cans — on-site, in minutes.
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={STORE_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 rounded-xl text-base font-bold text-white transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
-            style={{ background: '#f36a22' }}
+          {/* Left: Text content */}
+          <div
+            className="text-center lg:text-left"
+            style={{
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? 'none' : 'translateY(20px)',
+              transition: 'opacity 0.8s ease, transform 0.8s ease',
+            }}
           >
-            Shop Now →
-          </a>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 rounded-xl text-base font-bold text-white transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
-            style={{ background: '#25D366' }}
-          >
-            💬 Chat on WhatsApp
-          </a>
-        </div>
-      </div>
+            <h1
+              className="font-extrabold tracking-tight mb-6"
+              style={{
+                fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+                lineHeight: 1.05,
+                color: '#FFFFFF',
+              }}
+            >
+              Seal More. Sell More.<br />
+              <span style={{ color: '#f36a22' }}>Stand Out.</span>
+            </h1>
 
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-        style={{ color: '#8B8FA8' }}
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-          <path d="M12 5v14M5 12l7 7 7-7" />
-        </svg>
+            <p
+              className="mb-8 mx-auto lg:mx-0"
+              style={{
+                color: '#A8A8B3',
+                fontSize: 'clamp(1rem, 1.4vw, 1.125rem)',
+                lineHeight: 1.6,
+                maxWidth: '520px',
+              }}
+            >
+              iPAK gives SA hospitality, retail &amp; events the power to package fresh products in branded sealable cans — on-site, in seconds.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a
+                href={STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 font-bold transition-all"
+                style={{
+                  background: '#f36a22',
+                  color: '#FFFFFF',
+                  padding: '14px 32px',
+                  borderRadius: '999px',
+                  fontSize: '15px',
+                  letterSpacing: '0.02em',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = '#d4561a'}
+                onMouseLeave={(e) => e.currentTarget.style.background = '#f36a22'}
+              >
+                SHOP NOW
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Machine image */}
+          <div
+            className="flex justify-center lg:justify-end"
+            style={{
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? 'none' : 'translateY(20px)',
+              transition: 'opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s',
+            }}
+          >
+            <img
+              src="/images/machine-front.png"
+              alt="iPAK canning machine"
+              style={{
+                maxWidth: '420px',
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain',
+              }}
+            />
+          </div>
+
+        </div>
       </div>
     </section>
   )

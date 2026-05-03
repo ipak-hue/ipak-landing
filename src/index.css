@@ -1,43 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-@import "tailwindcss";
 
-@theme {
-  --color-bg:       #0D0D1A;
-  --color-surface:  #161626;
-  --color-surface2: #1E1E32;
-  --color-border:   #252540;
-  --color-orange:   #f36a22;
-  --color-green:    #25D366;
-  --color-text:     #F0EDE8;
-  --color-muted:    #8B8FA8;
-  --color-red:      #EF4444;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  background: #000000;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #FFFFFF;
+  scroll-behavior: smooth;
 }
 
-body {
-  background: #0D0D1A;
-  color: #F0EDE8;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23A8A8B3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px !important;
 }
 
 select option {
-  background: #161626;
-  color: #F0EDE8;
+  background: #0A0A0A;
+  color: #FFFFFF;
 }
 
-input::placeholder,
-select::placeholder {
-  color: #8B8FA8;
+input::placeholder {
+  color: #666;
 }
