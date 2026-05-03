@@ -18,7 +18,6 @@ export default function Products() {
 
         <div ref={ref} style={{ opacity: inView ? 1 : 0, transform: inView ? 'none' : 'translateY(40px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}>
 
-          {/* The Cans */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center', marginBottom: '5rem' }}>
             <div>
               <h3 style={{ color: '#FFFFFF', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, marginBottom: '1rem' }}>The Cans</h3>
@@ -37,14 +36,13 @@ export default function Products() {
                 SHOP NOW
               </a>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', background: '#FFFFFF', borderRadius: '16px', padding: '2rem' }}>
               <img src="/images/cans-pair.png" alt="iPAK sealable cans" style={{ maxWidth: '380px', maxHeight: '400px', width: '100%', height: 'auto', objectFit: 'contain' }} />
             </div>
           </div>
 
-          {/* The Canning Machine */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', background: '#FFFFFF', borderRadius: '16px', padding: '2rem' }}>
               <img src="/images/machine-pair.png" alt="iPAK canning machine" style={{ maxWidth: '460px', maxHeight: '420px', width: '100%', height: 'auto', objectFit: 'contain' }} />
             </div>
             <div>
