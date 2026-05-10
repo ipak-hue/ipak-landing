@@ -58,3 +58,10 @@ input::placeholder {
   .hero-video-desktop { display: flex !important; }
   .hero-video-mobile { display: none !important; }
 }
+
+@media (max-width: 767px) {
+  .hero-video-mobile video {
+    width: 85% !important;
+    max-height: 55vh !important;
+  }
+}
