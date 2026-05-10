@@ -6,9 +6,8 @@ export default function Nav() {
     <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <a href="#hero" style={{ textDecoration: 'none' }}>
-          <span style={{ fontSize: '24px', color: '#FFFFFF', fontWeight: 800 }}>iPAk</span>
+          <img src="/images/logo.jpg" alt="iPAK" style={{ height: '44px', width: 'auto', objectFit: 'contain' }} />
         </a>
-        {/* Desktop only buttons */}
         <div className="desktop-nav-buttons" style={{ display: 'flex', gap: '12px' }}>
           <a href={STORE_URL} target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: '#f36a22', color: '#FFFFFF', padding: '10px 24px', borderRadius: '999px', fontSize: '13px', fontWeight: 700, textDecoration: 'none', letterSpacing: '0.04em' }}>
