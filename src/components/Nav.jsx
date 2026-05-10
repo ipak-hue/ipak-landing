@@ -8,12 +8,12 @@ export default function Nav() {
         <a href="#hero" style={{ textDecoration: 'none' }}>
           <img src="/images/logo.jpg" alt="iPAK" style={{ height: '44px', width: 'auto', objectFit: 'contain' }} />
         </a>
-        <div className="desktop-nav-buttons" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
           <a href={STORE_URL} target="_blank" rel="noopener noreferrer">
-            <img src="/images/shop-now-btn.png" alt="Shop Now" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+            <img src="/images/shop-now-btn.png" alt="Shop Now" style={{ height: '22px', width: 'auto', objectFit: 'contain' }} />
           </a>
           <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
-            <img src="/images/whatsapp-btn.png" alt="WhatsApp" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+            <img src="/images/whatsapp-btn.png" alt="WhatsApp" style={{ height: '22px', width: 'auto', objectFit: 'contain' }} />
           </a>
         </div>
       </div>

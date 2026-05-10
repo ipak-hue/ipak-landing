@@ -7,11 +7,10 @@ import Products from './components/Products'
 import WhyIPak from './components/WhyIPak'
 import ConsultationForm from './components/ConsultationForm'
 import Footer from './components/Footer'
-import StickyBar from './components/StickyBar'
 
 export default function App() {
   return (
-    <div style={{ background: '#000000', minHeight: '100vh', paddingBottom: '72px' }}>
+    <div style={{ background: '#000000', minHeight: '100vh' }}>
       <Nav />
       <main>
         <Hero />
@@ -23,7 +22,6 @@ export default function App() {
         <ConsultationForm />
       </main>
       <Footer />
-      <StickyBar />
     </div>
   )
 }
