@@ -7,11 +7,11 @@ export default function Hero() {
   useEffect(() => { setMounted(true) }, [])
 
   return (
-    <section style={{ background: '#000000', minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '5rem', paddingBottom: '3rem' }}>
+    <section style={{ background: '#000000', minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '5rem', paddingBottom: '0' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'flex-end' }}>
 
-          <div style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'none' : 'translateY(20px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
+          <div style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'none' : 'translateY(20px)', transition: 'opacity 0.8s ease, transform 0.8s ease', paddingBottom: '3rem' }}>
             <h1 style={{ fontWeight: 800, lineHeight: 1.05, color: '#FFFFFF', marginBottom: '1.5rem' }}>
               <span style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', display: 'block' }}>Seal More. Sell More.</span>
               <span style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#f36a22', display: 'block' }}>Stand Out.</span>
@@ -25,13 +25,13 @@ export default function Hero() {
             </a>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: mounted ? 1 : 0, transition: 'opacity 0.8s ease 0.15s' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', opacity: mounted ? 1 : 0, transition: 'opacity 0.8s ease 0.15s', height: 'calc(100vh - 5rem)', maxHeight: '900px' }}>
             <video
               autoPlay
               loop
               muted
               playsInline
-              style={{ maxWidth: '100%', maxHeight: '560px', width: '100%', height: 'auto', objectFit: 'contain', borderRadius: '12px' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
             >
               <source src="/images/hero-video.mp4" type="video/mp4" />
             </video>
