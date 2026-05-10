@@ -65,3 +65,9 @@ input::placeholder {
     max-height: 55vh !important;
   }
 }
+
+@media (max-width: 767px) {
+  .hero-video-mobile {
+    margin-top: -12vh !important;
+  }
+}
