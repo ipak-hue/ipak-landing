@@ -49,3 +49,12 @@ input::placeholder {
   .hero-inner-grid { gap: 1.25rem !important; }
   .hero-lead { margin-bottom: 1rem !important; }
 }
+
+@media (max-width: 767px) {
+  .hero-video-desktop { display: none !important; }
+  .hero-video-mobile { display: flex !important; }
+}
+@media (min-width: 768px) {
+  .hero-video-desktop { display: flex !important; }
+  .hero-video-mobile { display: none !important; }
+}

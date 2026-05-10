@@ -25,14 +25,16 @@ export default function Hero() {
             </a>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', opacity: mounted ? 1 : 0, transition: 'opacity 0.8s ease 0.15s', height: 'calc(100vh - 5rem)' }}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
-            >
+          {/* Desktop video */}
+          <div className="hero-video-desktop" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', opacity: mounted ? 1 : 0, transition: 'opacity 0.8s ease 0.15s', height: 'calc(100vh - 5rem)' }}>
+            <video autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}>
+              <source src="/images/hero-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          {/* Mobile video */}
+          <div className="hero-video-mobile" style={{ display: 'none', justifyContent: 'center', alignItems: 'flex-end', opacity: mounted ? 1 : 0, transition: 'opacity 0.8s ease 0.15s' }}>
+            <video autoPlay loop muted playsInline style={{ width: '70%', maxHeight: '40vh', objectFit: 'contain', objectPosition: 'bottom' }}>
               <source src="/images/hero-video.mp4" type="video/mp4" />
             </video>
           </div>
