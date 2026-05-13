@@ -1,5 +1,5 @@
 const STATS = [
-  { value: '75,000+', label: 'Cans sealed at the', highlight: 'Australian Open' },
+  { value: '55,000+', label: 'Cans sealed at the', highlight: 'Australian Open' },
   { value: '6-Month', label: 'Machine Warranty', highlight: '' },
   { value: '', label: 'Built for', highlight: 'High-Volume Hospitality', icon: '⚡' },
 ]
@@ -10,13 +10,13 @@ export default function SocialProof() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
 
-          {/* 75,000+ */}
+          {/* 55,000+ */}
           <div className="text-center">
             <div
               className="font-extrabold mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: '#f36a22', lineHeight: 1 }}
             >
-              75,000+
+              55,000+
             </div>
             <div style={{ color: '#A8A8B3', fontSize: '15px', lineHeight: 1.5 }}>
               Cans sealed at the{' '}
