@@ -71,3 +71,13 @@ input::placeholder {
     margin-top: -12vh !important;
   }
 }
+
+/* Hero headline size */
+.hero-headline {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+@media (min-width: 768px) {
+  .hero-headline {
+    font-size: clamp(1.86rem, 3.72vw, 3.255rem);
+  }
+}
