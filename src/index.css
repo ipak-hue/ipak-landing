@@ -14,6 +14,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   color: #FFFFFF;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 select {
@@ -34,20 +36,28 @@ input::placeholder {
   color: #666;
 }
 
-/* Desktop: show nav buttons, hide sticky bar, show hero button */
+input:focus, select:focus {
+  box-shadow: 0 0 0 2px rgba(243,106,34,0.2);
+}
+
+/* Hero headline */
+.hero-headline {
+  font-size: clamp(1.8rem, 5vw, 3.255rem);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .hero-headline { white-space: normal !important; font-size: clamp(1.6rem, 7vw, 2.2rem) !important; }
+}
+
+/* Desktop: show hero button */
 @media (min-width: 768px) {
-  .mobile-sticky-bar { display: none !important; }
-  
   .hero-shop-btn { display: inline-flex !important; }
 }
 
-/* Mobile: hide nav buttons, show sticky bar, hide hero button */
+/* Mobile */
 @media (max-width: 767px) {
-  
-  .mobile-sticky-bar { display: flex !important; }
   .hero-shop-btn { display: none !important; }
   .hero-inner-grid { gap: 1.25rem !important; }
-  .hero-lead { margin-bottom: 1rem !important; }
 }
 
 @media (max-width: 767px) {
@@ -64,31 +74,7 @@ input::placeholder {
     width: 85% !important;
     max-height: 55vh !important;
   }
-}
-
-@media (max-width: 767px) {
   .hero-video-mobile {
     margin-top: -12vh !important;
   }
-}
-
-/* Hero headline size */
-.hero-headline {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-}
-@media (min-width: 768px) {
-  .hero-headline {
-    font-size: clamp(1.86rem, 3.72vw, 3.255rem);
-  }
-}
-
-/* Smooth scroll */
-html { scroll-behavior: smooth; }
-
-/* Orange glow on focus for inputs */
-input:focus, select:focus { box-shadow: 0 0 0 2px rgba(243,106,34,0.2); }
-
-/* Mobile: stack grids to single column */
-@media (max-width: 640px) {
-  .hero-headline { white-space: normal !important; }
 }
