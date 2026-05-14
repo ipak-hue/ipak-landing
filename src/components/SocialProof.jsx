@@ -1,45 +1,27 @@
-const STATS = [
-  { value: '55,000+', label: 'Cans sealed at the', highlight: 'Australian Open' },
-  { value: '6-Month', label: 'Machine Warranty', highlight: '' },
-  { value: '', label: 'Built for', highlight: 'High-Volume Hospitality', icon: '⚡' },
-]
-
 export default function SocialProof() {
   return (
     <section style={{ background: '#000000', padding: '4rem 0' }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2.5rem', textAlign: 'center' }}>
 
-          {/* 55,000+ */}
-          <div className="text-center">
-            <div
-              className="font-extrabold mb-2"
-              style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: '#f36a22', lineHeight: 1 }}
-            >
+          <div>
+            <div style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: '#f36a22', fontWeight: 800, lineHeight: 1, marginBottom: '0.5rem' }}>
               55,000+
             </div>
             <div style={{ color: '#A8A8B3', fontSize: '15px', lineHeight: 1.5 }}>
-              Cans sealed at the{' '}
-              <span style={{ color: '#FFFFFF', fontWeight: 600 }}>Australian Open</span>
+              Cans sealed at the <span style={{ color: '#FFFFFF', fontWeight: 600 }}>Australian Open</span>
             </div>
           </div>
 
-          {/* Built for High-Volume */}
-          <div className="text-center">
-            <div className="mb-2" style={{ fontSize: '2rem' }}>⚡</div>
+          <div>
+            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>⚡</div>
             <div style={{ color: '#A8A8B3', fontSize: '15px', lineHeight: 1.5 }}>
-              Built for{' '}
-              <span style={{ color: '#FFFFFF', fontWeight: 600 }}>High-Volume</span>{' '}
-              Hospitality
+              Built for <span style={{ color: '#FFFFFF', fontWeight: 600 }}>High-Volume</span> Hospitality
             </div>
           </div>
 
-          {/* 6-Month Warranty */}
-          <div className="text-center">
-            <div
-              className="font-extrabold mb-2"
-              style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: '#f36a22', lineHeight: 1 }}
-            >
+          <div>
+            <div style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: '#f36a22', fontWeight: 800, lineHeight: 1, marginBottom: '0.5rem' }}>
               6-Month
             </div>
             <div style={{ color: '#A8A8B3', fontSize: '15px', lineHeight: 1.5 }}>
