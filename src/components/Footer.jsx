@@ -7,7 +7,7 @@ export default function Footer() {
         padding: '2rem 0',
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem", width: "100%" }}>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <span
             className="font-extrabold tracking-tight"

@@ -5,7 +5,7 @@ export default function About() {
 
   return (
     <section id="about" style={{ background: '#000000', padding: '6rem 0' }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem", width: "100%" }}>
         <div
           ref={ref}
           className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
