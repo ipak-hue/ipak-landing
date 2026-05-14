@@ -1,8 +1,8 @@
 export default function SocialProof() {
   return (
     <section style={{ background: '#000000', padding: '4rem 0' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2.5rem', textAlign: 'center' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', textAlign: 'center', alignItems: 'center' }}>
 
           <div>
             <div style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: '#f36a22', fontWeight: 800, lineHeight: 1, marginBottom: '0.5rem' }}>
