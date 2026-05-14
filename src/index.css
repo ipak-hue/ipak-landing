@@ -81,3 +81,14 @@ input::placeholder {
     font-size: clamp(1.86rem, 3.72vw, 3.255rem);
   }
 }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Orange glow on focus for inputs */
+input:focus, select:focus { box-shadow: 0 0 0 2px rgba(243,106,34,0.2); }
+
+/* Mobile: stack grids to single column */
+@media (max-width: 640px) {
+  .hero-headline { white-space: normal !important; }
+}
