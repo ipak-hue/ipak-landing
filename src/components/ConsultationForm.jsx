@@ -92,7 +92,7 @@ export default function ConsultationForm() {
       id="consultation"
       style={{ background: '#000000', padding: '6rem 0' }}
     >
-      <div className="max-w-3xl mx-auto px-6 lg:px-12 w-full">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem", width: "100%" }}>
         <div
           ref={ref}
           style={{
