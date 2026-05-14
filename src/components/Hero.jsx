@@ -12,13 +12,13 @@ export default function Hero() {
         <div className="hero-inner-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center', width: '100%', height: '100%' }}>
 
           <div style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'none' : 'translateY(20px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}>
-            <h1 style={{ fontWeight: 800, lineHeight: 1.1, color: '#FFFFFF', marginBottom: '1.5rem' }}>
+            <h1 style={{ fontWeight: 800, lineHeight: 1.1, color: '#FFFFFF', marginBottom: '1.5rem', whiteSpace: 'nowrap' }}>
               <span className="hero-headline" style={{ display: 'block' }}>Package fresh products</span>
               <span className="hero-headline" style={{ color: '#f36a22', display: 'block' }}>on-site, in seconds!</span>
             </h1>
             <a href={STORE_URL} target="_blank" rel="noopener noreferrer" className="hero-shop-btn"
-              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', color: '#FFFFFF', padding: '4px 4px', borderRadius: '999px', textDecoration: 'none' }}>
-              <img src="/images/shop-now-btn.png" alt="Shop Now" style={{ height: '20px', width: 'auto', objectFit: 'contain' }} />
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', padding: '0', textDecoration: 'none' }}>
+              <img src="/images/shop-now-btn.png" alt="Shop Now" style={{ height: '50px', width: 'auto', objectFit: 'contain' }} />
             </a>
           </div>
 
