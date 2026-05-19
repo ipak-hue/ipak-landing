@@ -7,25 +7,39 @@ export default function About() {
   return (
     <section id="about" style={{ background: '#000000', padding: '6rem 0', position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', top: '40%', left: '-150px', width: '500px', height: '500px', background: 'radial-gradient(ellipse, rgba(243,106,34,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
 
+          {/* Image — bleeds left on desktop, cropped on mobile */}
           <div ref={imgRef} style={{
-            display: 'flex', justifyContent: 'center',
             opacity: imgInView ? 1 : 0,
             transform: imgInView ? 'translateX(0) scale(1)' : 'translateX(-100px) scale(0.92)',
             transition: 'opacity 1.1s cubic-bezier(0.22,1,0.36,1), transform 1.1s cubic-bezier(0.22,1,0.36,1)',
+            marginLeft: 'clamp(-2rem, -6vw, -6rem)',
+            marginRight: '0',
           }}>
-            <img src="/images/can-in-hand.png" alt="Branded sealable can"
-              style={{ maxWidth: '480px', width: '100%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 60px rgba(243,106,34,0.2))' }} />
+            <img
+              src="/images/can-in-hand.png"
+              alt="Hand holding branded iPAK matcha can"
+              style={{
+                width: '100%',
+                maxWidth: '680px',
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'block',
+                filter: 'drop-shadow(0 0 60px rgba(243,106,34,0.15))',
+              }}
+            />
           </div>
 
+          {/* Text */}
           <div ref={txtRef} style={{
             opacity: txtInView ? 1 : 0,
             transform: txtInView ? 'translateX(0)' : 'translateX(100px)',
             transition: 'opacity 1.1s cubic-bezier(0.22,1,0.36,1) 0.1s, transform 1.1s cubic-bezier(0.22,1,0.36,1) 0.1s',
           }}>
-            <p style={{ fontSize: '12px', color: '#f36a22', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '1rem', opacity: txtInView ? 1 : 0, transition: 'opacity 0.6s ease 0.3s' }}>What is iPAK?</p>
+            <p style={{ fontSize: '12px', color: '#f36a22', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '1rem' }}>What is iPAK?</p>
             <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)', lineHeight: 1.1, color: '#FFFFFF', fontWeight: 800, marginBottom: '1.5rem' }}>
               Fresh Products.<br />
               <span style={{ color: '#f36a22' }}>Sealed in Seconds.</span>
