@@ -216,18 +216,18 @@ export default function Revenue() {
                   textDecoration: 'line-through',
                 }}
               >
-                R120
+                R58
               </span>
               <span
                 style={{ color: '#f36a22', fontSize: '24px', fontWeight: 800 }}
               >
-                R210+
+                R100+
               </span>
               <span
                 className="px-2.5 py-1 rounded-full text-xs font-bold"
                 style={{ background: 'rgba(243,106,34,0.15)', color: '#f36a22' }}
               >
-                +75%
+                +40%
               </span>
             </div>
           </div>
