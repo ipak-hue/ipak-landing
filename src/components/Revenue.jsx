@@ -19,9 +19,9 @@ const USE_CASES = [
 ]
 
 const BASKET = [
-  { label: 'Iced Coffee', before: 45, after: 85, afterMax: 120, uplift: 89 },
-  { label: 'Cold Brew', before: 55, after: 100, afterMax: 130, uplift: 82 },
-  { label: 'Cocktail', before: 95, after: 160, afterMax: 200, uplift: 68 },
+  { label: 'Iced Coffee', before: 45, after: 65, afterMax: 90, uplift: 38 },
+  { label: 'Cold Brew', before: 55, after: 70, afterMax: 100, uplift: 45 },
+  { label: 'Cocktail', before: 75, after: 90, afterMax: 120, uplift: 33 },
 ]
 
 export default function Revenue() {
