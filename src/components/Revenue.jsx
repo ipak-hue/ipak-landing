@@ -190,7 +190,7 @@ export default function Revenue() {
                     className="absolute left-0 top-0 h-full"
                     style={{
                       width: basketInView
-                        ? `${(item.uplift / 50) * 100}%`
+                        ? `${(item.uplift / 70) * 100}%`
                         : '0%',
                       background: '#f36a22',
                       transition: `width 1.1s cubic-bezier(0.22,1,0.36,1) ${i * 180}ms`,
