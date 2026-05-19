@@ -1,7 +1,7 @@
 import { useInView } from '../hooks/useInView'
 
 const VALUES = [
-  { icon: '💰', title: 'More Profit', desc: 'Double your drink sales. Charge R85–R120+. Move fast. Stand out.' },
+  { icon: '💰', title: 'More Profit', desc: 'Increase your average drink price by 30–45%. Move fast. Stand out.' },
   { icon: '✨', title: 'Premium Look', desc: 'Sealed cans = cleaner, modern, Instagram-worthy presentation. Create viral-ready products.' },
   { icon: '📦', title: 'New Revenue Lines', desc: 'Batch, deliver, or grab-and-go. Shelf life = less wastage, more options.' },
   { icon: '⚡', title: 'Easy to Use', desc: 'One button. Minimal maintenance. Built for high-volume service.' },
