@@ -46,7 +46,7 @@ export default function WhyIPak() {
         }}>
           <p style={{ fontSize: '12px', color: '#f36a22', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '1rem' }}>Why iPAK</p>
           <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)', lineHeight: 1.1, color: '#FFFFFF', fontWeight: 800 }}>
-            Built for <span style={{ color: '#f36a22' }}>SA Business</span>
+            Built for <span style={{ color: "#f36a22" }}>Business</span>
           </h2>
         </div>
 
